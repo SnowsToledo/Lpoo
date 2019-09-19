@@ -3,21 +3,40 @@ package Trabalho;
 
 public class Logic {
     public int[][] movimentar(int num, int lin, int col, int lab[][]){
-        lab[lin][col] = 0;
-        if(num == 0){
-            lin--;
-        }
-        else if(num == 1){
-            lin++;
-        }
-        else if(num == 2){
-            col--;
-        }
-        else if(num == 3){
-            col++;
-        }
-        lab[lin][col] = 3;
-        return lab;
+        if(lab[13][27] != 3){
+            lab[lin][col] = 0;
+            if(num == 0){
+                lin--;
+            }
+            else if(num == 1){
+                lin++;
+            }
+            else if(num == 2){
+                col--;
+            }
+            else{
+                col++;
+            }
+            if(lab[lin][col] == 0 || lab[lin][col] == 9){
+                lab[lin][col] = 3;
+            }else{
+                JOptionPane.showMessageDialog(null, "O movimento não pode ser feito");
+                if(num == 0){
+                    lin++;
+                }
+                else if(num == 1){
+                    lin--;
+                }
+                else if(num == 2){
+                    col++;
+                }
+                else{
+                    col--;
+                }
+            }else{
+                JOptionPane.showMessagDialog(null, "Você chegou no final!! Parabens!!!");
+            }
+            return lab;
     }
     public int procurarLin(int lab[][]){
         int lin = 0;
@@ -58,6 +77,7 @@ public class Logic {
             }
         }
         lab[0][0] = 3;
+        lab[13][27] = 9;
         return lab;
     }
 }
