@@ -113,18 +113,22 @@ public class Labirinto extends javax.swing.JFrame {
     
     private void cimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cimaActionPerformed
         aux.movimentar(0, aux.procurarLin(aux.gerarMat()), aux.procurarCol(aux.gerarMat()), aux.gerarMat());
+        tela.setText(aux.gerarMatS);
     }//GEN-LAST:event_cimaActionPerformed
 
     private void esquerdaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_esquerdaActionPerformed
         aux.movimentar(2, aux.procurarLin(aux.gerarMat()), aux.procurarCol(aux.gerarMat()), aux.gerarMat());
+        tela.setText(aux.gerarMatS);
     }//GEN-LAST:event_esquerdaActionPerformed
 
     private void direitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_direitaActionPerformed
         aux.movimentar(3, aux.procurarLin(aux.gerarMat()), aux.procurarCol(aux.gerarMat()), aux.gerarMat());
+        tela.setText(aux.gerarMatS);
     }//GEN-LAST:event_direitaActionPerformed
 
     private void baixoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_baixoActionPerformed
         aux.movimentar(1, aux.procurarLin(aux.gerarMat()), aux.procurarCol(aux.gerarMat()), aux.gerarMat());
+        tela.setText(aux.gerarMatS);
     }//GEN-LAST:event_baixoActionPerformed
 
     private void startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startActionPerformed
