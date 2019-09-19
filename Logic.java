@@ -39,14 +39,9 @@ public class Logic {
         }
         return col;
     }
-    public String gerarMatS(){
+    public String gerarMatS(int[][] lab){
         String ret= "";
-        int[][] lab = new int[13][27];
-        for (int i = 0; i < lab.length; i++) {
-            for (int j = 0; j < lab[0].length; j++) {
-                lab[i][j] = 0;
-            }
-        }
+        int[][] lab = gerarMat();
         for (int i = 0; i < lab.length; i++) {
             for (int j = 0; j < lab[0].length; j++) {
                 ret += " "+lab[i][j];
@@ -62,6 +57,7 @@ public class Logic {
                 lab[i][j] = 0;
             }
         }
+        lab[0][0] = 3;
         return lab;
     }
 }
